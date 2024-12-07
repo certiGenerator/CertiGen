@@ -7,7 +7,6 @@ import Feature2 from './KeyFeature/Feature2';
 import Feature3 from './KeyFeature/Feature3';
 import Feature4 from './KeyFeature/Feature4';
 import Contact from './contact/Contact';
-import Event from '../certifcate/eventCreation/Event';
 
 
 const MainComponent = () => {
@@ -39,7 +38,6 @@ const MainComponent = () => {
      <Feature4/>
      <FAQ ref={FAQRef}/>
      <Contact ref={contactRef}/>
-     <Event/>
     </div>
   )
 }

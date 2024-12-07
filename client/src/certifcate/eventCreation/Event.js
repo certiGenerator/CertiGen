@@ -1,109 +1,6 @@
-// import React, { useEffect, useState } from "react";
-// import axios from "axios";
-// import "./event.css";
-
-// const Event = () => {
-//   const [templates, setTemplates] = useState([]);
-//   const [svgContent, setSvgContent] = useState("");
-
-//   useEffect(() => {
-//     const fetchTemplates = async () => {
-//       try {
-//         const res = await axios.get("http://localhost:8000/api/templates");
-//         const templateNames = res.data.map((name) => ({ name, content: null }));
-
-//         const fetchPreviews = await Promise.all(
-//           templateNames.map(async (template) => {
-//             try {
-//               const previewRes = await axios.get(
-//                 `http://localhost:8000/templates/${template.name}`,
-//                 { responseType: "text" }
-//               );
-//               return { ...template, content: previewRes.data };
-//             } catch (err) {
-//               console.error(`Error fetching preview for ${template.name}:`, err);
-//               return template; // Return without content in case of error
-//             }
-//           })
-//         );
-
-//         setTemplates(fetchPreviews);
-//       } catch (err) {
-//         console.error("Error fetching templates:", err);
-//       }
-//     };
-
-//     fetchTemplates();
-//   }, []);
-
-//   const handleTemplateSelect = (templateName) => {
-//     axios
-//       .get(`http://localhost:8000/api/templates/${templateName}`, {
-//         responseType: "text",
-//       })
-//       .then((res) => {
-//         console.log(`Full SVG content for ${templateName}:`, res.data);
-//         setSvgContent(res.data);
-//       })
-//       .catch((err) => {
-//         console.error(`Error fetching full SVG for ${templateName}:`, err);
-//       });
-//   };
-
-//   return (
-//     <div className="container">
-//       <header className="header">
-//         <div className="logo">
-//           <div className="logo-icon">🔵</div>
-//           <h1>CertiGen</h1>
-//         </div>
-//         <div className="account">ACCOUNT</div>
-//       </header>
-//       <main className="main">
-//         <h2>Pick Your Perfect Certificate Template!</h2>
-//         <div className="template-grid">
-//           {templates.length > 0 ? (
-//             templates.map((template) => (
-//               <div className="template-card" key={template.name}>
-//                 {template.content ? (
-//                   <>
-//                     <div
-//                       className="template-card-preview"
-//                       dangerouslySetInnerHTML={{ __html: template.content }}
-//                     />
-//                     <button onClick={() => handleTemplateSelect(template.name)}>
-//                       {/* Use {template.name.replace(".svg", "")} */}
-//                       <div
-//       className="button-svg-preview"
-//       dangerouslySetInnerHTML={{ __html: template.content }}
-//     />
-//                     </button>
-//                   </>
-//                 ) : (
-//                   <p>Loading {template.name}...</p>
-//                 )}
-//               </div>
-//             ))
-//           ) : (
-//             <p>No templates available</p>
-//           )}
-//         </div>
-//         {svgContent && (
-//           <div
-//             className="template-editor"
-//             dangerouslySetInnerHTML={{ __html: svgContent }}
-//           />
-//         )}
-//       </main>
-//     </div>
-//   );
-// };
-
-// export default Event;
-
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./event.css";
 
 const Event = () => {
   const [templates, setTemplates] = useState([]);
@@ -157,36 +54,47 @@ const Event = () => {
   };
 
   return (
-    <div>
-      <h1>Certificate Editor</h1>
-      <div>
-        <h2>Choose a Template</h2>
+    <div className="container">
+       <header className="header">
+       <div className="logo">
+          <div className="logo-icon">
+            <img src="./logo.png" alt="" />
+            </div>
+         </div>
+        <div className="account">ACCOUNT</div>
+     </header>   
+     <main className="main">
+        <h2>Pick Your Perfect Certificate Template!</h2>
+        <div className="template-grid">
         {templates.length > 0 ? (
-    templates.map((template) =>
-      template.content ? (
-        <div key={template.name} style={{ margin: "10px", display: "inline-block" }}>
-          <div dangerouslySetInnerHTML={{ __html: template.content }} />
+    templates.map((template) =>(
+      <div className="template-card" key={template.name}>
+      {template.content ? (
+        <>
+          <div className="template-card-preview" dangerouslySetInnerHTML={{ __html: template.content }} />
           <button onClick={() => handleTemplateSelect(template.name)}>
-            Use {template.name.replace(".svg", "")}
+            {/* Use {template.name.replace(".svg", "")} */}
           </button>
-        </div>
+          </>
       ) : (
         <p key={template}>Loading {template.name}...</p>
-      )
-    )
+      )}
+      </div>
+    ))
   ) : (
     <p>No templates available</p>
   )}
       </div>
 
-      <div>
+      {/* <div> */}
         {svgContent && (
-          <div
+          <div className="template-editor"
             dangerouslySetInnerHTML={{ __html: svgContent }}
             style={{ border: "1px solid #ccc", padding: "20px", marginTop: "20px" }}
           />
         )}
-      </div>
+      {/* </div> */}
+      </main> 
     </div>
   );
 };
