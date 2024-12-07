@@ -1,0 +1,36 @@
+.certificate-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff; /* Background color if needed */
+}
+
+.certificate-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.certificate-text {
+  flex: 1;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.certificate-text h2 {
+  font-size: 24px;
+  color: #00274d; /* Adjust as per design */
+  margin-bottom: 10px;
+}
+
+.certificate-text p {
+  font-size: 16px;
+  color: #333333; /* Adjust as per design */
+  line-height: 1.5;
+}

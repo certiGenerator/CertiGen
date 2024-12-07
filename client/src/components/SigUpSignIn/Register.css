@@ -1,0 +1,133 @@
+/* RegisterPage.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: #a4bbd6;
+  
+}
+
+.register-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 20px 14px 8px #00000033;
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #4657a5;
+  font-size: 32px;
+}
+h4 {
+  /* margin-bottom: 20px; */
+  text-align: center;
+  color:#4657a5;
+
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  /* background-color: #28a745; */
+  background-color: #6578d3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+  /* background-color: #218838; */
+  background-color: #4657a5;
+}
+
+/* Responsive Design */
+
+/* Tablet and Smaller Screens */
+@media (max-width: 768px) {
+  .register-container {
+    padding: 20px;
+  }
+
+  .register-form {
+    padding: 20px;
+    width: 90%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .register-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Mobile and Smaller Screens */
+@media (max-width: 480px) {
+  .register-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .register-button {
+    font-size: 13px;
+    padding: 6px;
+  }
+}
+

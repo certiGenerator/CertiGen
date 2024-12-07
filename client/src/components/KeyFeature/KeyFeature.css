@@ -1,0 +1,104 @@
+/* General Section Styling */
+.features-section {
+  background-color: #BDD1F1; /* Light blue background */
+  padding: 50px 20px;
+}
+
+/* Container */
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title Styling */
+.features-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4A5568; /* Dark gray text */
+  margin-bottom: 30px;
+}
+
+/* Content Wrapper */
+.features-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* For Larger Screens */
+@media (min-width: 768px) {
+  .features-content {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+}
+
+/* Text Section */
+.features-text {
+  flex: 1;
+  text-align: left;
+  max-width: 500px;
+}
+
+.features-text h3 {
+  font-size: 1.8rem;
+  color: #325DA7; /* Blue heading */
+  margin-bottom: 10px;
+}
+
+.features-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #001F55; /* Darker gray text */
+}
+
+/* Image Section */
+.features-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  /* transition: transform 0.3s ease-in-out; */
+}
+
+.features-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+.certificate-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff; /* Background color if needed */
+}
+
+.certificate-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.certificate-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.certificate-text {
+  flex: 1;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.certificate-text h2 {
+  font-size: 24px;
+  color: #00274d; /* Adjust as per design */
+  margin-bottom: 10px;
+}
+
+.certificate-text p {
+  font-size: 16px;
+  color: #333333; /* Adjust as per design */
+  line-height: 1.5;
+}

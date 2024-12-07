@@ -1,0 +1,150 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Main section */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #BDD1F1;
+}
+
+/* Header styles */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: #BDD1F1;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  /* position: sticky; */
+  top: 0;
+  z-index: 1000;
+}
+
+/* Left navigation (logo) */
+.left-nav img {
+  height: 100px;
+}
+
+/* Right navigation links */
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.right-nav a {
+  text-decoration: none;
+  color: #1943B8;
+  font-size:20px;
+  transition: color 0.3s ease;
+}
+
+.right-nav a:hover {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.right-nav button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.right-nav button:hover {
+  background-color: #0056b3;
+}
+
+/* Background image */
+.bg-image h1{
+  font-size: 55px;
+  font-weight: bolder;
+  color: #4A5568;
+  text-shadow: #0056b3;
+}
+.bg-image img {
+  max-width: 100%;
+  height: auto;
+  padding-left: 150px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* Start button section */
+.start-button {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.start-button button {
+  padding: 12px 24px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.start-button button:hover {
+  background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .right-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .right-nav button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .bg-image img {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .start-button button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-nav a {
+    font-size: 14px;
+  }
+
+  .right-nav button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .start-button button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

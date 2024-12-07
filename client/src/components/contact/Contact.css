@@ -1,0 +1,168 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: #e8ebf9; */
+  background-color: #BDD1F1;
+}
+
+.contact-form-container {
+  max-width: 500px;
+  height: 550px;
+  margin: 50px auto;
+  background-color: #f5f8ff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 12px auto;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #eef2ff;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.submit-button {
+  background-color: #6578d3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #4657a5;
+}
+
+
+
+ /* Contact Info */
+.contact-info {
+  display: flex;
+  height: 50px;
+  justify-content: space-between; 
+  gap: 15px; 
+  background-color: #15204d;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.contact-info p {
+  flex: 1; /* Allow each item to take up equal space */
+  margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .contact-info {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: left;
+  }
+
+  .contact-info p {
+    margin: 5px 0;
+  }
+}
+
+
+/* Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-form-container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  input,
+  textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+  .contact-form-container {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input,
+  textarea {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .submit-button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+  }
+}
