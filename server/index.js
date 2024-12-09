@@ -2,12 +2,13 @@ const express = require('express');
 require('dotenv').config();
 const connectDB = require('./config/db');
 const path = require('path')
-
+const cookieParser= require("cookie-parser");
 
 connectDB();
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 const cors = require('cors');
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 

@@ -29,6 +29,14 @@ exports.register = async (req, res) => {
       expiresIn: '24h', // Token expires in 1 hour
     });
 
+    res.cookie('CertiGen', token, {
+      httpOnly: true, // Prevent access via client-side JavaScript
+      secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+      sameSite: 'Strict', // Prevent CSRF
+      maxAge: 3600000, // 1 hour
+    });
+
+
     res.status(201).json({ 
       message: 'User registered successfully',
       success:true,
@@ -63,6 +71,14 @@ exports.login = async (req, res) => {
       expiresIn: '24h', // Token expires in 1 hour
     });
 
+    res.cookie('CertiGEn', token, {
+      httpOnly: true, // Secure cookie
+      secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+      sameSite: 'Strict', // CSRF protection
+      maxAge: 3600000, // 1 hour
+    });
+
+
     res.status(200).json({ 
     message: 'Login successful', 
     success:true,
@@ -73,3 +89,4 @@ exports.login = async (req, res) => {
     res.status(500).json({ error: 'Server error: ' + err.message });
   }
 };
+
