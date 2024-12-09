@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./event.css";
+import TopNav from "../TopNav/topNav";
 
 const Event = () => {
   const [templates, setTemplates] = useState([]);
@@ -55,14 +56,15 @@ const Event = () => {
 
   return (
     <div className="container">
-       <header className="header">
+      <TopNav/>
+       {/* <header className="header">
        <div className="logo">
           <div className="logo-icon">
             <img src="./logo.png" alt="" />
             </div>
          </div>
         <div className="account">ACCOUNT</div>
-     </header>   
+     </header>    */}
      <main className="main">
         <h2>Pick Your Perfect Certificate Template!</h2>
         <div className="template-grid">

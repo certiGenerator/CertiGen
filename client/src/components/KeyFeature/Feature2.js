@@ -6,7 +6,7 @@ const Feature2 = () => {
     <div className="certificate-section">
       <div className="certificate-image">
         <img
-          src="./Feature2.png" // Replace this with the path to your illustration
+          src="./feature2.png" // Replace this with the path to your illustration
           alt="Illustration"
         />
       </div>

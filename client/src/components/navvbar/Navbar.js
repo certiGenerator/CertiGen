@@ -9,7 +9,7 @@ const Navbar = ({scrollToAbout,scrollToContact,scrollToFAQ}) => {
     <div className="home-section">
     <header>
       <div className="left-nav">
-        <img src="./logo.png" alt="logo" />
+      <img src="./logo.png" alt="logo" />
       </div>
       <div className="right-nav">
         <a onClick={scrollToAbout} >About</a>
